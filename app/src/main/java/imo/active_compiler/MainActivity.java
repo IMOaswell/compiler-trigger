@@ -23,13 +23,14 @@ public class MainActivity extends Activity {
 		
 		final EditText filePathText = findViewById(R.id.filepath_edittext);
 		final Button notificationButton = findViewById(R.id.notification_button);
+		final Button exitButton = findViewById(R.id.exit_button);
 		final SharedPreferences sp = getSharedPreferences("FILE_PATH", MODE_PRIVATE);
 		
 		String savedProjectPath = sp.getString("FILE_PATH", "");
 		if(! savedProjectPath.isEmpty()){
 			filePathText.setText(savedProjectPath);
 			showActiveNotification(savedProjectPath);
-		} 
+		}
 		
 		notificationButton.setOnClickListener(new View.OnClickListener(){
 			public void onClick(View v){
@@ -42,6 +43,12 @@ public class MainActivity extends Activity {
 				
 				Toast.makeText(MainActivity.this, "Done.", Toast.LENGTH_LONG).show();
 				finish();
+			}
+		});
+		
+		exitButton.setOnClickListener(new View.OnClickListener(){
+			public void onClick(View v){
+				finishAffinity();
 			}
 		});
     }

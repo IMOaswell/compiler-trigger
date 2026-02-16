@@ -13,7 +13,9 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="file path:"
-		android:textAppearance="?android:attr/textAppearanceMedium"/>
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:gravity="bottom|center"
+		android:layout_weight="1.0"/>
 
 	<EditText
 		android:layout_width="wrap_content"
@@ -26,8 +28,16 @@
 		android:layout_width="wrap_content"
 		style="?android:attr/buttonBarButtonStyle"
 		android:layout_height="wrap_content"
-		android:text="open/update notification"
+		android:text="update notification"
 		android:id="@+id/notification_button"/>
+
+	<Button
+		android:layout_width="match_parent"
+		style="?android:attr/buttonBarButtonStyle"
+		android:layout_height="wrap_content"
+		android:text="exit"
+		android:layout_weight="1.0"
+		android:id="@+id/exit_button"/>
 
 </LinearLayout>
 
