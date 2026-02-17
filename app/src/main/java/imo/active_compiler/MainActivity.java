@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
 		intent.putExtra("project_path", projectPath);
 		//startActivity(intent);
 
-		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
 		Notification.Builder builder = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) 
 			? new Notification.Builder(this, channelId) 
