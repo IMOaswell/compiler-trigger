@@ -1,1 +1,4 @@
-app/build
+app/build/*
+!app/build/bin/
+app/build/bin/*
+!app/build/bin/signed.apk
